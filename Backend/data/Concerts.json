@@ -1,0 +1,112 @@
+[
+  {
+    "id": "concert001",
+    "name": "Arijit Singh Live",
+    "artist": "Arijit Singh",
+    "image": "https://i.imgur.com/X8aTz3y.jpg",
+    "location": "Mumbai, India",
+    "date": "2025-07-10",
+    "time": "19:00",
+    "price": 1200,
+    "category": "concert"
+  },
+  {
+    "id": "concert002",
+    "name": "The Local Indie Fest",
+    "artist": "Various Artists",
+    "image": "https://i.imgur.com/vkGmDld.jpg",
+    "location": "Bangalore, India",
+    "date": "2025-07-15",
+    "time": "17:00",
+    "price": 800,
+    "category": "concert"
+  },
+  {
+    "id": "concert003",
+    "name": "Sunburn Reload",
+    "artist": "DJ Snake",
+    "image": "https://i.imgur.com/XVJ3KkP.jpg",
+    "location": "Goa, India",
+    "date": "2025-07-18",
+    "time": "21:00",
+    "price": 2500,
+    "category": "concert"
+  },
+  {
+    "id": "concert004",
+    "name": "Retro Bollywood Night",
+    "artist": "Kumar Sanu & Alka Yagnik",
+    "image": "https://i.imgur.com/ZzSytAm.jpg",
+    "location": "Delhi, India",
+    "date": "2025-07-22",
+    "time": "19:30",
+    "price": 1500,
+    "category": "concert"
+  },
+  {
+    "id": "concert005",
+    "name": "Coke Studio Fusion",
+    "artist": "Various",
+    "image": "https://i.imgur.com/91uEuNg.jpg",
+    "location": "Hyderabad, India",
+    "date": "2025-07-25",
+    "time": "18:00",
+    "price": 1000,
+    "category": "concert"
+  },
+  {
+    "id": "concert006",
+    "name": "Rap Battle Bash",
+    "artist": "Emiway Bantai vs Raftaar",
+    "image": "https://i.imgur.com/N47CTM5.jpg",
+    "location": "Pune, India",
+    "date": "2025-07-28",
+    "time": "20:00",
+    "price": 900,
+    "category": "concert"
+  },
+  {
+    "id": "concert007",
+    "name": "Western Symphony Night",
+    "artist": "London Philharmonic",
+    "image": "https://i.imgur.com/dxcmDpU.jpg",
+    "location": "Chennai, India",
+    "date": "2025-08-01",
+    "time": "19:00",
+    "price": 1800,
+    "category": "concert"
+  },
+  {
+    "id": "concert008",
+    "name": "Tamil Beats Festival",
+    "artist": "Anirudh Ravichander",
+    "image": "https://i.imgur.com/7kAF37L.jpg",
+    "location": "Coimbatore, India",
+    "date": "2025-08-05",
+    "time": "20:00",
+    "price": 1600,
+    "category": "concert"
+  },
+  {
+    "id": "concert009",
+    "name": "EDM Night India",
+    "artist": "Alan Walker",
+    "image": "https://i.imgur.com/ukYo3SH.jpg",
+    "location": "Kolkata, India",
+    "date": "2025-08-08",
+    "time": "22:00",
+    "price": 2000,
+    "category": "concert"
+  },
+  {
+    "id": "concert010",
+    "name": "Indie Soul Evenings",
+    "artist": "Prateek Kuhad",
+    "image": "https://i.imgur.com/59RZtqU.jpg",
+    "location": "Ahmedabad, India",
+    "date": "2025-08-12",
+    "time": "18:30",
+    "price": 1100,
+    "category": "concert"
+  }
+]
