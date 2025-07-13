@@ -110,7 +110,7 @@ const BookingHistory = () => {
 
   return (
     <div className='flex items-center justify-center'>
-      <div className="p-10 w-6xl bg-white h-screen flex flex-col">
+      <div className="p-10 w-6xl bg-white h-fit flex flex-col ">
         <Toaster />
         <h1 className="text-4xl font-extrabold text-center mb-10 text-indigo-600 tracking-tight flex items-center justify-center gap-2">
           <Clapperboard className='size-10' /> My Booking History

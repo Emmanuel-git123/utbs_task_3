@@ -94,7 +94,7 @@ const Movies_Details = () => {
                         <button onClick={handleClick} className='bg-red-400 mt-14 w-fit flex gap-1 py-3 items-center px-13 rounded-lg text-white cursor-pointer hover:bg-red-500 duration-300 hover:scale-105'><Tag />Book Tickets</button>
                         {slots && (
                             <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
-                                <div className="bg-white w-md rounded-xl shadow-xl p-6">
+                                <div className="bg-white w-md rounded-xl shadow-xl p-6 h-fit">
                                     <div className="flex justify-between items-center mb-4">
                                         <h1 className="text-sm font-medium text-gray-700">{movie_details.Title}</h1>
                                         <button onClick={handleClick} className="text-xl p-1 rounded-2xl bg-gray-200 text-gray-600 hover:text-black transition cursor-pointer">

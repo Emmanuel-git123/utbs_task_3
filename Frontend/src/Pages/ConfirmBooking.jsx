@@ -1,11 +1,11 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
-import {toast,Toaster} from 'react-hot-toast';
+import { toast, Toaster } from 'react-hot-toast';
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 
 const ConfirmBooking = () => {
     const location = useLocation();
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     const { id } = useParams();
     const query = new URLSearchParams(location.search);
 
@@ -17,6 +17,8 @@ const ConfirmBooking = () => {
 
     const [movie, setMovie] = useState(null);
     const [user, setUser] = useState(null);
+
+    const [bookingFlag,setBookingFlag] = useState(true);
 
     useEffect(() => {
         const fetch_data = async () => {
@@ -55,7 +57,8 @@ const ConfirmBooking = () => {
             toast.error("Insufficient wallet balance.");
             return;
         }
-
+        
+        setBookingFlag(false);
         try {
             const response = await fetch("http://localhost:8080/api/bookings/saveBookings", {
                 method: "POST",
@@ -83,6 +86,7 @@ const ConfirmBooking = () => {
                 }, 1000);
             } else {
                 toast.error(data.message || "Booking failed.");
+                // setBookingFlag(false);
             }
 
         } catch (error) {
@@ -94,7 +98,7 @@ const ConfirmBooking = () => {
 
     return (
         <div className='flex items-center justify-center'>
-            <Toaster /> 
+            <Toaster />
             <div className="w-md mt-10 p-6 bg-white rounded-xl shadow-lg h-md">
                 {movie && (
                     <>
@@ -117,8 +121,7 @@ const ConfirmBooking = () => {
                             <p className="text-lg font-semibold text-gray-900 border-t pt-2">
                                 Total: ₹{totalPrice}
                             </p>
-                            <button onClick={handleClick} className='block cursor-pointer text-center mt-6 bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-6 rounded-full transition'>Confirm Booking</button>
-                        </div>
+                            {bookingFlag&&<button onClick={handleClick} className='block cursor-pointer text-center mt-6 bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-6 rounded-full transition'>Confirm Booking</button>}                        </div>
                     </>
                 )}
             </div>
