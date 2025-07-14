@@ -122,23 +122,18 @@ const deleteConcert = async (req, res) => {
     try {
         const bookingId = req.params.id;
 
-        // 1. Find the Concert booking
         const booking = await ConcertBooking.findById(bookingId);
         if (!booking) return res.status(404).json({ message: "Booking not found" });
 
-        // 2. Check authorization
         if (booking.user.toString() !== req.user.id) {
             return res.status(403).json({ message: "Unauthorized to delete this booking" });
         }
 
-        // 3. Fetch user
         const user = await User.findById(req.user.id);
         if (!user) return res.status(404).json({ message: "User not found" });
 
-        // 4. Refund amount to user
         user.balance += booking.totalPrice;
 
-        // 5. Deduct amount from vendor (Concert creator)
         const concert = await Concert.findById(booking.concert);
         if (!concert) return res.status(404).json({ message: "Concert not found" });
 
@@ -148,11 +143,9 @@ const deleteConcert = async (req, res) => {
             await vendor.save();
         }
 
-        // 6. Remove booking from user
         user.concertBookings.pull(bookingId);
         await user.save();
 
-        // 7. Delete booking
         await ConcertBooking.findByIdAndDelete(bookingId);
 
         res.status(200).json({ message: "Concert booking cancelled and amount refunded" });
